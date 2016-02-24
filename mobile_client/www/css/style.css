@@ -1,0 +1,132 @@
+/*==============================*\
+COLORS
+#E8E0D1
+#FFF7E5
+#FFFCF9 // Background
+#E8E3DE
+#FFF2E5
+#2C2E2F
+<<<<<<< HEAD
+#BBD530 // Buttons
+=======
+#BBD530 // Green button
+#D53030 // Red button
+>>>>>>> featStyling
+\*==============================*/
+
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+
+/*==============================*\
+MAIN SECTION
+\*==============================*/
+body{
+  background-color: #FFFCF9;
+}
+
+.scroll {
+    height: 100%;
+}
+
+input{
+  font-family: 'Arimo', sans-serif;
+}
+
+p{
+  font-family: 'Lobster', sans-serif;
+  font-size: 24px;
+}
+
+.center{
+  margin: 30px auto 30px auto;
+  display: block;
+  text-align: center;
+}
+
+#name{
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+
+/*==============================*\
+MAP SECTION
+\*==============================*/
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#centerText{
+  margin:29px auto;
+}
+
+.footerPop{
+  height: 80px;
+  background-color: #BBD530;
+  color: #FFF7E5;
+
+}
+
+/*==============================*\
+LOCATION SECTION
+\*==============================*/
+#review{
+  outline: 1px solid #2C2E2F;
+  width: 100%;
+  font-family: 'Arimo', sans-serif;
+  margin: 0;
+}
+
+.image-list-thumb {
+    padding: 2px;
+    height: 100px;
+}
+
+.image-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 5px 10px;
+}
+ul.rating li i {
+  font-size: 30px;
+  color: #FC0;
+}
+
+.review-stars {
+  display: inline-block;
+  float: right;
+  color: #FC0;
+}
+
+.review-author {
+  font-size: 16px;
+}

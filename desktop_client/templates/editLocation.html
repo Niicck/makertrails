@@ -1,0 +1,14 @@
+<div ng-switch on="location.editing">
+  <div ng-switch-when="true">
+      <input type="text" ng-model="location.name">
+      <button class="button" ng-click="renameLocation(selectedLocations, markers, $index, location.name)">Save</button>
+      <button class="redButton" ng-click="removeLocation(selectedLocations, markers, $index, map)">X</button><br>
+      <span>Radius Size: </span>
+      <input type="number" ng-model="location.radius">
+      <span> m.</span> <br>
+  </div>
+  <div ng-switch-when="false"
+      ng-click="location.editing = true">
+    {{location.name}}
+  </div>
+</div>

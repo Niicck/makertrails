@@ -1,0 +1,48 @@
+<ion-view title='{{mapData.mapInfo.name}}'>
+  <ion-content>
+    <div class='list'>
+      <div class='item item-divider'>
+        {{mapData.mapInfo.description}}
+      </div>
+    </div>
+    <!-- photos section -->
+    <button class="button button-block button-balanced" ng-click="takePicture()">
+      Add a photo
+    </button>
+    <div class="item item-list-detail">
+      <ion-scroll direction="x">
+        <img class="image-list-thumb" ng-repeat="photo in locationPhotos" ng-src="{{photo.link}}" ng-click="showImageGallery($index)" />
+      </ion-scroll>
+    </div>
+    <!-- reviews -->
+    <div class="center">
+      <p>Add your review</p>
+      <rating ng-model="rating.rate" max="rating.max"></rating>
+    </div>
+    <textarea id="review" placeholder="  type here..." name="submitReview" ng-model="submitNewReview.text" rows=4>
+    </textarea>
+    <button class="button button-block button-balanced" ng-click="submitReview()" ng-disabled="userHasReviewed">
+      Submit your review
+    </button>
+    <div class="card" ng-repeat="review in locationReviews">
+      <div class="item item-divider">
+        <div class="item-not-rating">
+          <span class="review-author">{{review.author}}</span>
+          <div class="review-stars">
+            <i class="icon ion-ios-star icon-rating" ng-if="review.rating >= 1"></i>
+            <i class="icon ion-ios-star icon-rating" ng-if="review.rating >= 2"></i>
+            <i class="icon ion-ios-star icon-rating" ng-if="review.rating >= 3"></i>
+            <i class="icon ion-ios-star icon-rating" ng-if="review.rating >= 4"></i>
+            <i class="icon ion-ios-star icon-rating" ng-if="review.rating >= 5"></i>
+          </div>
+        </div>
+      </div>
+      <div class="item item-text-wrap">
+        <h4>{{review.body}}</h4>
+      </div>
+      <div class="item item-divider">
+        <p>{{review.createdAt}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
